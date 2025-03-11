@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+
+    <title>Security Site</title>
+  </head>
+  <body class="">
+    <header class="header">
+      <nav class="container container-wrapper">
+        <a href="tel:0800000000">0 800 000 000</a>
+        <a class="header-logo" href="">
+          <img class="main-logo" src="src/img/mian-logo.png" alt="Legion main logo" width="60" />
+        </a>
+        <button class="header-button" type="button" id="menuToggle">
+          <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="60">
+            <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+            <path class="line middle" d="m 70,50 h -40" />
+            <path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+          </svg>
+        </button>
+      </nav>
+
+      <div class="burger-menu" id="burgerMenu">
+        <ul>
+          <li class="burger-link"><a href="#hero">Головна</a></li>
+          <li class="burger-link"><a href="#our-services">Послуги</a></li>
+          <li class="burger-link"><a href="#about-us">Про нас</a></li>
+          <li class="burger-link"><a href="#contacts-with-us">Контакти</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero" id="hero">
+        <div class="container">
+          <h1 class="visually-hidden"></h1>
+          <a class="hero-button">Замовити послугу(охорону)</a>
+        </div>
+      </section>
+      <section class="about-us" id="about-us">
+        <div class="container">
+          <h2 class="about-us-title">Про нашу компанію</h2>
+          <p class="about-us-text">
+            Охоронне агентство Торговий дім "Ліверпуль" – це надійний партнер у сфері безпеки, що забезпечує комплексний захист бізнесу, приватної власності та заходів.
+            <br />Ми пропонуємо професійні охоронні послуги, орієнтовані на найвищі стандарти безпеки та комфорту наших клієнтів. <br />Наша команда складається з досвідчених
+            фахівців, які мають відповідну підготовку та володіють сучасними методами охорони. <br />
+            Ми використовуємо передові технології, щоб гарантувати безпеку на найвищому рівні.
+          </p>
+        </div>
+      </section>
+      <section class="our-services" id="our-services">
+        <div class="container">
+          <h2 class="our-services-title">Послуги</h2>
+          <ul class="our-services-list">
+            <li class="our-services-list-item">
+              <svg class="icon" viewBox="0 0 32 32" width="35" height="35">
+                <path
+                  d="M16.5 30c-6.352 0-11.5-5.359-11.5-11.375 0-1.397 0.031-2.531 1-3.625-0.105 0.634 1.397 6.055 6.305 5.771-0.213-4.119-1.327-14.21 3.847-17.698-0.457 5.484 0.886 12.851 6.877 13.927-0.343-2.199-0.302-5.857 1.238-6.533 0.166 3.369 2.657 5.447 2.657 8.685 0 5.864-5.673 10.848-10.424 10.848v0zM25.905 6.953c-4.385 1.25-5.188 4.795-4.905 7.047-3.128-3.678-3-7.907-3-14-10.032 3.783-7.699 14.688-8 18-2.523-2.065-3-7-3-7-2.664 1.371-4 5.031-4 8 0 7.18 5.82 13 13 13s13-5.82 13-13c0-4.267-3.133-6.235-3.095-12.047v0z"
+                />
+              </svg>
+              Пожежна безпека
+            </li>
+            <li class="our-services-list-item">
+              <svg class="icon" viewBox="0 0 32 32" width="35" height="35">
+                <path
+                  d="M30 6h-0.887c-0.525 0-1.029 0.207-1.404 0.576l-2.709 2.672v-1.248c0-1.657-1.344-3-3-3h-19c-1.654 0-3 1.345-3 3v16c0 1.656 1.343 3 3 3h19c1.656 0 3-1.344 3-3v-1.221l2.709 2.672c0.375 0.369 0.879 0.576 1.404 0.576h0.887c1.104 0 2-0.895 2-2v-16.027c0-1.105-0.896-2-2-2zM3 25c-0.552 0-1-0.449-1-1v-16c0-0.553 0.447-1 1-1h19c0.551 0 1 0.448 1 1v16c0 0.551-0.449 1-1 1h-19zM30 24.027h-1l-4-4v-0.027l-1-1v-6l5-5h1v16.027z"
+                />
+              </svg>
+              Відеоспостереження
+            </li>
+            <li class="our-services-list-item">
+              <svg class="icon" viewBox="0 0 32 32" width="35" height="35">
+                <path
+                  d="M25.641 0.654c-0.143-0.484-0.654-0.758-1.136-0.617l-4.927 1.459c-0.411-0.772-1.214-1.305-2.148-1.305-1.346 0-2.441 1.095-2.441 2.441v0.721c-10.337-1.243-9.301 12.849-7.546 19.759 0.29 1.141 2.052 0.657 1.762-0.486-1.267-4.989-2.872-16.599 3.77-17.474-1.606 1.307-2.603 3.29-2.603 5.464v20.471c0 0.504 0.409 0.914 0.914 0.914h12.287c0.504 0 0.914-0.41 0.914-0.914v-20.471c0-2.979-1.865-5.605-4.615-6.616v-0.278l4.633 1.372c0.086 0.026 0.174 0.038 0.26 0.038 0.394 0 0.758-0.257 0.876-0.654 0.143-0.484-0.133-0.993-0.618-1.136l-2.62-0.776 2.62-0.776c0.484-0.144 0.76-0.653 0.618-1.137zM22.66 23.518h-4.166v-9.716h4.166v9.716zM22.66 10.616v1.359h-5.080c-0.504 0-0.914 0.409-0.914 0.914v11.544c0 0.504 0.409 0.914 0.914 0.914h5.080v4.827h-10.46v-19.557c0-2.386 1.616-4.466 3.929-5.059 0.404-0.104 0.687-0.468 0.687-0.885v-2.039c0-0.339 0.275-0.614 0.614-0.614s0.614 0.275 0.614 0.614v2.039c0 0.417 0.283 0.782 0.687 0.885 2.313 0.593 3.928 2.673 3.928 5.059z"
+                />
+              </svg>
+              Пожежна сигналізації
+            </li>
+            <li class="our-services-list-item">
+              <svg class="icon" viewBox="0 0 32 32" width="35" height="35">
+                <path
+                  d="M13.5 0c-8.937 0-13.208 5.047-13.386 5.262-0.073 0.090-0.114 0.202-0.114 0.319v10.054c0 8.504 7.826 13.553 11.19 15.329 0.244 0.129 0.546 0.035 0.676-0.209 0.129-0.244 0.035-0.547-0.209-0.676-3.98-2.101-10.657-6.771-10.657-14.445v-9.863c0.702-0.755 4.632-4.597 12-4.765v30.494c0 0.276 0.224 0.5 0.5 0.5 0.149 0 0.283-0.065 0.375-0.169 1.637-0.704 13.125-6.015 13.125-16.331v-10c0-0.117-0.041-0.23-0.115-0.319-0.148-0.179-3.714-4.375-11.141-5.124-0.275-0.019-0.521 0.173-0.548 0.447-0.028 0.275 0.173 0.52 0.447 0.548 6.287 0.634 9.703 3.945 10.357 4.64v9.808c0 8.952-9.363 13.949-12 15.179v-30.179c0-0.276-0.224-0.5-0.5-0.5z"
+                />
+              </svg>
+              Фізична охорона
+            </li>
+            <li class="our-services-list-item">
+              <svg class="icon" viewBox="0 0 32 32" width="35" height="35">
+                <path
+                  d="M14.683 14.698c0.117 0 0.235-0.041 0.33-0.124l11.317-9.922-0.66-0.752-11.317 9.921c-0.208 0.182-0.229 0.498-0.046 0.706 0.099 0.113 0.237 0.171 0.376 0.171zM10.188 32c6.142 0 9.812-4.83 9.812-9.5 0-1.346-0.322-2.829-0.798-3.792l4.522-2.261c0.169-0.085 0.276-0.258 0.276-0.447v-4h3c0.011 0 0.102-0.006 0.113-0.006 0.666-0.045 0.865-0.257 0.887-0.994v-4h3c0.129 0 0.218 0.014 0.278 0.023 0.121 0.019 0.347 0.054 0.543-0.122 0.202-0.18 0.193-0.408 0.185-0.609-0.002-0.072-0.006-0.167-0.006-0.292v-4.531c0-0.81-0.659-1.469-1.469-1.469h-3.875c-0.354 0-0.698 0.129-0.969 0.364l-13.187 11.56c-0.649-0.13-1.63-0.299-2.313-0.299-5.617 0-10.187 4.57-10.187 10.187s4.57 10.188 10.188 10.188zM10.188 12.625c0.501 0 1.359 0.12 2.354 0.328 0.155 0.034 0.314-0.010 0.432-0.113l13.371-11.722c0.087-0.076 0.198-0.118 0.311-0.118h3.875c0.259 0 0.469 0.21 0.469 0.469v4.531h-3.5c-0.276 0-0.5 0.224-0.5 0.5v4.5h-3.5c-0.276 0-0.5 0.224-0.5 0.5v4.191l-4.724 2.362c-0.131 0.065-0.227 0.186-0.262 0.328s-0.006 0.293 0.080 0.412c0.44 0.607 0.906 2.114 0.906 3.707 0 4.178-3.296 8.5-8.812 8.5-5.066 0-9.188-4.122-9.188-9.188s4.122-9.187 9.188-9.187zM8.5 27c1.93 0 3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5-3.5 1.57-3.5 3.5 1.57 3.5 3.5 3.5zM8.5 21c1.378 0 2.5 1.122 2.5 2.5s-1.122 2.5-2.5 2.5-2.5-1.122-2.5-2.5 1.122-2.5 2.5-2.5z"
+                />
+              </svg>
+              Контроль доступу
+            </li>
+            <li class="our-services-list-item">
+              <svg class="icon" viewBox="0 0 32 32" width="35" height="35">
+                <path
+                  d="M16 24.5c1.4 0 2.5-1.1 2.5-2.5s-1.1-2.5-2.5-2.5-2.5 1.1-2.5 2.5 1.1 2.5 2.5 2.5zM16 20.5c0.85 0 1.5 0.65 1.5 1.5s-0.65 1.5-1.5 1.5-1.5-0.65-1.5-1.5 0.65-1.5 1.5-1.5z"
+                />
+                <path
+                  d="M12.8 24c-0.25 0.15-0.3 0.45-0.15 0.7 0.75 1.15 2 1.8 3.35 1.8s2.6-0.65 3.35-1.8c0.15-0.25 0.1-0.55-0.15-0.7s-0.55-0.1-0.7 0.15c-0.55 0.85-1.5 1.35-2.5 1.35s-1.95-0.5-2.5-1.35c-0.15-0.25-0.45-0.3-0.7-0.15z"
+                />
+                <path
+                  d="M12.050 25.55c-0.15-0.2-0.5-0.25-0.7-0.1s-0.25 0.5-0.1 0.7c1.15 1.5 2.85 2.35 4.75 2.35s3.6-0.85 4.75-2.35c0.15-0.2 0.15-0.55-0.1-0.7-0.2-0.15-0.55-0.15-0.7 0.1-0.95 1.25-2.4 1.95-3.95 1.95s-3-0.7-3.95-1.95z"
+                />
+                <path
+                  d="M21.4 26.95c-1.35 1.6-3.3 2.55-5.4 2.55s-4.050-0.95-5.4-2.55c-0.2-0.2-0.5-0.25-0.7-0.050s-0.25 0.5-0.050 0.7c1.5 1.85 3.75 2.9 6.15 2.9s4.65-1.050 6.15-2.9c0.2-0.2 0.15-0.55-0.050-0.7-0.2-0.2-0.55-0.15-0.7 0.050z"
+                />
+                <path
+                  d="M27 1.5h-22c-0.3 0-0.5 0.2-0.5 0.5v1c0 1.4 1.1 2.5 2.5 2.5v4c0 1.4 0.3 2.7 0.9 3.85 0 0.050 0.050 0.15 0.1 0.2 1.45 2.95 4.5 4.95 8 4.95s6.55-2 8.050-4.95c0.050-0.050 0.1-0.1 0.1-0.2 0.55-1.15 0.9-2.45 0.9-3.85v-4c1.4 0 2.5-1.1 2.5-2.5v-1c-0.050-0.3-0.25-0.5-0.55-0.5zM16 17.5c-3.050 0-5.7-1.7-7.050-4.25 1.6-2.35 4.2-3.75 7.050-3.75s5.45 1.4 7.050 3.75c-1.35 2.55-4 4.25-7.050 4.25zM24 9.5c0 0.95-0.2 1.85-0.5 2.7-1.75-2.35-4.5-3.7-7.5-3.7s-5.75 1.35-7.5 3.7c-0.3-0.85-0.5-1.75-0.5-2.7v-4h16v4zM26.5 3c0 0.85-0.65 1.5-1.5 1.5h-18c-0.85 0-1.5-0.65-1.5-1.5v-0.5h21v0.5z"
+                />
+                <path
+                  d="M16 11c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5-1.1-2.5-2.5-2.5zM16 15c-0.85 0-1.5-0.65-1.5-1.5s0.65-1.5 1.5-1.5 1.5 0.65 1.5 1.5-0.65 1.5-1.5 1.5z"
+                />
+              </svg>
+              Охоронна сигналізація
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="our-advantages" id="our-advantages">
+        <div class="container">
+          <h2 class="our-advantages-title">Наші переваги</h2>
+          <ul class="our-advantages-list">
+            <li class="our-advantages-list-item">
+              <h3 class="our-advantages-list-title">Професіоналізм та досвід</h3>
+              <p class="our-advantages-text">У нашій команді працюють сертифіковані спеціалісти з багаторічним досвідом у сфері безпеки.</p>
+            </li>
+            <li class="our-advantages-list-item">
+              <h3 class="our-advantages-list-title">Сучасні технології</h3>
+              <p class="our-advantages-text">Ми використовуємо найновіші охоронні системи, відеоспостереження та системи контролю доступу.</p>
+            </li>
+            <li class="our-advantages-list-item">
+              <h3 class="our-advantages-list-title">Індивідуальний підхід</h3>
+              <p class="our-advantages-text">Кожен клієнт отримує персоналізоване рішення з урахуванням усіх ризиків та потреб.</p>
+            </li>
+            <li class="our-advantages-list-item">
+              <h3 class="our-advantages-list-title">Цілодобовий контроль</h3>
+              <p class="our-advantages-text">Наша служба працює 24/7, забезпечуючи постійний моніторинг та оперативне реагування.</p>
+            </li>
+            <li class="our-advantages-list-item">
+              <h3 class="our-advantages-list-title">Доступні ціни</h3>
+              <p class="our-advantages-text">Ми пропонуємо якісні послуги за конкурентними цінами без прихованих платежів.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="our-clients" id="our-clients">
+        <div class="container">
+          <h2 class="our-clients-title">Наші партнери</h2>
+          <ul class="our-clients-list">
+            <li class="our-clients-list-item">
+              <img class="partner-image" src="/src/svg/auchan-logo.png" alt="" />
+            </li>
+            <li class="our-clients-list-item">
+              <img class="partner-image" src="/src/svg/avk-logo.jpg" alt="" />
+            </li>
+            <li class="our-clients-list-item">
+              <img class="partner-image" src="/src/svg/shedro-logo.png" alt="" />
+            </li>
+            <li class="our-clients-list-item">
+              <img class="partner-image" src="/src/svg/kyivstar-logo.jpg" alt="" />
+            </li>
+            <li class="our-clients-list-item">
+              <img class="partner-image" src="/src/svg/ukrrichflot_logo.jpg" alt="" />
+            </li>
+            <li class="our-clients-list-item">
+              <img class="partner-image" src="/src/svg/operator-logo.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contacts-with-us" id="contacts-with-us">
+        <div class="container">
+          <div class="contacts-form">
+            <div class="contacts-form-left/">
+              <span class="form-text">У вас виникли питання?</span> <br />
+              <span class="form-text">Залиште заявку на констультацію</span>
+            </div>
+            <div class="contacts-form-right">
+              <form class="form" action>
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Ваше Ім'я" required />
+                <label for="phoneInput"></label>
+                <input type="tel" id="phoneInput" name="phoneInput" placeholder="Ваш Номер" maxlength="13" required />
+                <button class="form-button" type="submit">Відправити</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <h2 class="reviews-title">Відгуки</h2>
+          <div class="swiper mySwiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="slide-content">
+                  <img src="/src/img/hero.jpg" alt="Фото" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem.</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="slide-content">
+                  <img src="/src/img/hero.jpg" alt="Фото" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem.</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="slide-content">
+                  <img src="/src/img/hero.jpg" alt="Фото" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem.</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="slide-content">
+                  <img src="/src/img/hero.jpg" alt="Фото" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem.</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="slide-content">
+                  <img src="/src/img/hero.jpg" alt="Фото" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem.</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="slide-content">
+                  <img src="/src/img/hero.jpg" alt="Фото" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem.</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="slide-content">
+                  <img src="/src/img/hero.jpg" alt="Фото" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem.</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="slide-content">
+                  <img src="/src/img/hero.jpg" alt="Фото" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem.</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="slide-content">
+                  <img src="/src/img/hero.jpg" alt="Фото" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem.</p>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-button-next" style="color: #f7e306"></div>
+            <div class="swiper-button-prev" style="color: #f7e306"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="office-location" id="office-location">
+        <div class="container">
+          <div class="office-location-inner">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4445.779466339267!2d35.09499443537712!3d48.504933696992225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d9586a30cf4487%3A0x3cf9045837495a3f!2z0LLRg9C70LjRhtGPINCW0YPRgNC90LDQu9GW0YHRgtGW0LIsIDEsINCU0L3RltC_0YDQviwg0JTQvdGW0L_RgNC-0L_QtdGC0YDQvtCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDQ5MDAw!5e0!3m2!1suk!2sua!4v1741682002656!5m2!1suk!2sua"
+              width="345"
+              height="345"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="contact-information">
+              <address class="office-location-address">вул. Журналістів 1, м. Дніпро</address>
+              <span class="office-location-name">Торговий дім "Ліверпуль"</span>
+            </div>
+            <div class="contact-phone">
+              <a href="tel:0800000000000">080000000000</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-inner-left">
+            <div class="footer-company-info">
+              <ul class="footer-company-list">
+                <li class="footer-company-item">
+                  <a href="#about-us" class="footer-company-link">Про нас</a>
+                </li>
+                <li class="footer-company-item">
+                  <a href="#our-services" class="footer-company-link">Послуги</a>
+                </li>
+                <li class="footer-company-item">
+                  <a href="#contacts-with-us" class="footer-company-link">Контакти</a>
+                </li>
+                <li class="footer-company-item">
+                  <a href="#reviews" class="footer-company-link">Відгуки</a>
+                </li>
+                <li class="footer-company-item">
+                  <a href="/src/files/license.PDF" class="footer-company-link" target="_blank" rel="noopener noreferrer">Ліцензія</a>
+                </li>
+                <li class="footer-company-item">
+                  <a href="/src/files/license ДАБІ.pdf" class="footer-company-link" target="_blank" rel="noopener noreferrer">Описова інформація</a>
+                </li>
+                <li class="footer-company-item">
+                  <a href="#license" class="footer-company-link" target="_blank" rel="noopener noreferrer"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-inner-right">
+            <div class="footer-contact-information">
+              <address class="footer-office-location-address" style="font-style: normal">вул. Журналістів 1, м. Дніпро</address>
+              <span class="footer-office-location-name">Торговий дім "Ліверпуль"</span>
+            </div>
+            <div class="footer-contact-phone">
+              <a class="footer-contact-link" href="tel:0800000000000">080000000000</a>
+              <a href="mailto:Liverpool-td@i.ua">Liverpool-td@i.ua</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <span class="footer-copyright-text">&copy;Всі права захищені</span>
+          <a class="footer-logo" href="">
+            <img class="footer-main-logo" src="src/img/mian-logo.png" alt="Legion main logo" width="60" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="/src/js/main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

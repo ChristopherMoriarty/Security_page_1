@@ -7,8 +7,7 @@ services:
       context: .
       dockerfile: .docker/api/Dockerfile
     restart: always
-    ports:
-      - '8080:8080'
+    network_mode: host
     environment:
       - SMTP_USER=${SMTP_USER}
       - SMTP_PASSWORD=${SMTP_PASSWORD}
@@ -20,7 +19,4 @@ services:
       context: .
       dockerfile: .docker/front/Dockerfile
     restart: always
-    ports:
-      - "3000:3000"
-      - "5173:5173"
-    
+    network_mode: host

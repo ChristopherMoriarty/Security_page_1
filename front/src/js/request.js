@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const phone = document.getElementById("phoneInput").value.trim();
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/send-email/", { name, phone }, { headers: { "Content-Type": "application/json" } });
+      const response = await axios.post("http://127.0.0.1:8080/send-email/", { name, phone }, { headers: { "Content-Type": "application/json" } });
 
       alert("Заявка успішно відправлена!");
       form.reset();

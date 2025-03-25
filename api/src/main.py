@@ -3,6 +3,7 @@ from pydantic import BaseModel, EmailStr
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from fastapi.middleware.cors import CORSMiddleware
 
 from config import SMTP_USER, SMTP_PASSWORD, TARGET_EMAIL
 
@@ -39,5 +40,13 @@ def send_email(name: str, phone: str):
 async def send_email_endpoint(request: EmailRequest):
     send_email(request.name, request.phone)
     return {"message": "Email успешно отправлен"}
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(router)

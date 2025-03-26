@@ -235,7 +235,8 @@ address {
   margin-bottom: 10px;
   text-align: center;
 }
-.about-us-text {
+.about-us-text,
+.about-us-content-text {
   color: var(--main-light);
 }
 .our-services {
@@ -256,17 +257,17 @@ address {
 }
 .our-services-list-item {
   width: 168px;
-  height: 101px;
   background-color: var(--gray-transparent);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 10px;
   text-align: center;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
 }
 .our-services-list-item:hover .icon {
   fill: var(--main-light);
@@ -292,7 +293,6 @@ address {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
-  align-items: center;
 }
 .our-advantages-list-title {
   color: var(--gray-transparent);
@@ -440,7 +440,6 @@ input:focus {
 }
 .footer-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .footer-company-list {
@@ -461,6 +460,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .footer-office-location-address {
   margin-bottom: 5px;
@@ -475,7 +475,7 @@ input:focus {
 /* ====================================== */
 .swiper {
   width: 100%;
-  height: 330px;
+  height: 232px;
 }
 .swiper-pagination-bullet-active {
   background-color: var(--accent) !important;
@@ -499,7 +499,6 @@ input:focus {
   margin-right: auto;
 }
 .slide-content {
-  height: 455px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -516,6 +515,66 @@ input:focus {
 }
 .slide-content p:last-child {
   max-width: 275px;
+}
+#opener {
+  display: none;
+  transition: all 0.3s ease-in;
+}
+#opener:checked ~ .about-us-content {
+  display: block;
+}
+#opener:checked ~ label {
+  display: none;
+}
+.about-us label {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--main-dark);
+  background-color: var(--accent);
+  padding: 3px 13px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in;
+}
+.about-us label:hover {
+  color: var(--main-light);
+  background-color: transparent;
+  border-color: var(--main-light);
+}
+.about-us-content {
+  display: none;
+}
+.our-services-list > *:nth-child(9) {
+  grid-column: 1 / 3;
+  justify-self: center;
+}
+.our-services-list-item span {
+  display: inline-block;
+}
+.our-services-list-item-description {
+  font-size: 12px;
+}
+.our-services-list-item:hover .our-services-list-item-more {
+  text-decoration: underline;
+}
+.our-services-list-item a {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.our-clients-description {
+  text-align: center;
+  margin: 0 auto;
+}
+.footer-company-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.footer-inner-right {
+  max-width: 150px;
 }
 
 /* ====================================== */
@@ -562,7 +621,8 @@ input:focus {
   .hero-button {
     max-width: 260px;
   }
-  .about-us-text {
+  .about-us-text,
+  .about-us-content-text {
     font-size: 18px;
   }
   .our-clients-list {
@@ -574,7 +634,8 @@ input:focus {
   }
   .our-services-list-item {
     width: 100%;
-    height: 120px;
+    max-width: 279px;
+    font-size: 16px;
   }
   .our-clients-list-item img {
     max-width: 180px;
@@ -609,6 +670,28 @@ input:focus {
   .our-clients-title {
     margin-bottom: 20px;
   }
+  .our-advantages-list-title {
+    margin-bottom: 10px;
+  }
+  .footer-inner-right {
+    max-width: 191px;
+  }
+  .footer-company-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .footer-logo {
+    position: absolute;
+    top: -145px;
+    left: 210px;
+  }
+  .footer-main-logo {
+    width: 160px;
+    height: 143px;
+  }
+  .footer-inner {
+    margin-bottom: 10px;
+  }
 }
 @media screen and (min-width: 1158px) {
   .container {
@@ -618,15 +701,18 @@ input:focus {
     gap: 66px;
   }
   .our-services-list-item {
-    height: 160px;
     border-radius: 22px;
+    max-width: 600px;
   }
   .our-services-list {
     grid-column-gap: 40px;
     grid-row-gap: 40px;
   }
-  .about-us-text {
+  .about-us-text,
+  .about-us-content-text {
     font-size: 20px;
+    max-width: 900px;
+    margin: 0 auto;
   }
   .about-us-title {
     font-size: 26px;
@@ -640,7 +726,8 @@ input:focus {
     max-width: 380px;
   }
   .our-advantages-list {
-    column-gap: 60px;
+    column-gap: 78px;
+    row-gap: 30px;
   }
   .our-advantages-title {
     font-size: 26px;
@@ -700,5 +787,29 @@ input:focus {
   }
   .header a {
     font-size: 19px;
+  }
+  .our-services-list-item-description {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .our-services-list-item-more {
+    font-weight: 600;
+  }
+  .our-clients-description {
+    max-width: 900px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .about-us label {
+    margin-left: 110px;
+  }
+  .footer-main-logo {
+    width: 213px;
+    height: 197px;
+  }
+  .footer-logo {
+    position: absolute;
+    top: -210px;
+    left: 442px;
   }
 }

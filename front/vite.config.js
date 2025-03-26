@@ -1,5 +1,5 @@
 export default {
-    server: {
-      allowedHosts: ['liverpool-ua.com', 'www.liverpool-ua.com'],
-    },
-  };
+  server: {
+    allowedHosts: ["liverpool-ua.com", "www.liverpool-ua.com"],
+  },
+};

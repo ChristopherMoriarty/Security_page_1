@@ -1,22 +1,47 @@
+function setupPhoneInputBehavior(inputElement) {
+  inputElement.addEventListener("focus", function () {
+    if (!inputElement.value.trim()) {
+      inputElement.value = "+380";
+    }
+  });
+
+  inputElement.addEventListener("input", function (e) {
+    let value = e.target.value.replace(/\D/g, "");
+    if (!value.startsWith("380")) {
+      value = "380";
+    }
+    e.target.value = "+" + value;
+  });
+
+  inputElement.addEventListener("blur", function () {
+    if (inputElement.value === "+380") {
+      inputElement.value = "";
+    }
+  });
+}
+
 const phoneInput = document.getElementById("phoneInput");
+if (phoneInput) setupPhoneInputBehavior(phoneInput);
 
-phoneInput.addEventListener("focus", function () {
-  if (!phoneInput.value.trim()) {
-    phoneInput.value = "+380";
-  }
+const modalPhoneInput = document.getElementById("modalPhoneInput");
+if (modalPhoneInput) setupPhoneInputBehavior(modalPhoneInput);
+
+const openBtn = document.querySelector(".hero-button");
+const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("closeModal");
+
+openBtn.addEventListener("click", () => {
+  modal.style.display = "flex";
+  document.body.classList.add("no-scroll");
 });
 
-phoneInput.addEventListener("input", function (e) {
-  let value = e.target.value.replace(/\D/g, "");
-  if (!value.startsWith("380")) {
-    value = "380";
-  }
-  e.target.value = "+" + value;
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
 });
 
-phoneInput.addEventListener("blur", function () {
-  if (phoneInput.value === "+380") {
-    phoneInput.value = "";
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
   }
 });
 

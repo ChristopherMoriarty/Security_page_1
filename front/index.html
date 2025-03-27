@@ -427,6 +427,19 @@
         </div>
       </div>
     </footer>
+    <div class="modal-overlay" id="modal">
+      <div class="modal">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <form class="modal-form">
+          <h2>Заявка на консультацію</h2>
+          <label for="modalName"></label>
+          <input type="text" id="modalName" name="modalName" placeholder="Ваше Ім'я" required />
+          <label for="modalPhoneInput"></label>
+          <input type="tel" name="modalPhoneInput" id="modalPhoneInput" placeholder="Ваш Номер" required />
+          <button type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
     <script src="/src/js/main.js" type="module"></script>
     <script src="/src/js/request.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

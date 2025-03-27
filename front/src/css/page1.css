@@ -19,7 +19,8 @@ ol {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h1,
-h2 {
+h2,
+.form-text {
   color: #f7e306;
   text-align: center;
   word-wrap: break-word;
@@ -61,4 +62,46 @@ ul li {
   border: 1px solid #fbfbfb;
   background: transparent;
   color: #fbfbfb;
+}
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  resize: none;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 400px;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #918f8f;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+input:focus {
+  border-color: #0f0f0f;
+  outline: none;
+}
+.form-button {
+  margin: 0 auto;
+  width: 120px;
+  margin-top: 15px;
+  background: #f7e306;
+  color: #0f0f0f;
+  font-weight: 600;
+  border: 1px solid transparent;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.form-button:hover {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid #fbfbfb;
 }

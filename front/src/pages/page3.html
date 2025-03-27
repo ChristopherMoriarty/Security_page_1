@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
     <link rel="stylesheet" href="/src/css/page1.css" />
     <title>Пожежна сигналізація | ТОВ "ТОРГОВИЙ ДІМ ЛІВЕРПУЛЬ"</title>
   </head>
@@ -47,10 +48,25 @@
           <li>✅ Відповідність сучасним стандартам пожежної безпеки.</li>
         </ul>
 
-        <div class="contact">
-          <p>📞 <a href="tel:+380991706045">Зателефонуйте нам</a></p>
+        <div class="contacts-form">
+          <div class="contacts-form-left/">
+            <span class="form-text">У вас виникли питання?</span> <br />
+            <span class="form-text">Залиште заявку на консультацію</span>
+          </div>
+          <div class="contacts-form-right">
+            <form class="form" action>
+              <label for="name"></label>
+              <input type="text" id="name" name="name" placeholder="Ваше Ім'я" required />
+              <label for="phoneInput"></label>
+              <input type="tel" id="phoneInput" name="phoneInput" placeholder="Ваш Номер" maxlength="13" required />
+              <button class="form-button" type="submit">Відправити</button>
+            </form>
+          </div>
         </div>
       </div>
     </main>
+    <script src="/src/js/main.js" type="module"></script>
+    <script src="/src/js/request.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
   </body>
 </html>

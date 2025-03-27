@@ -4,42 +4,56 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainForm = document.querySelector(".form");
   const modalForm = document.querySelector(".modal-form");
   const modalElement = document.getElementById("modal");
-
-  mainForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phoneInput").value.trim();
-
-    try {
-      await axios.post("http://127.0.0.1:8080/send-email/", { name, phone });
-      alert("Заявка успішно відправлена!");
-      mainForm.reset();
-      modalElement.style.display = "none";
-      document.body.classList.remove("modal-open");
-    } catch (error) {
-      console.error("Помилка відправки:", error);
-      alert("Не вдалося відправити заявку. Спробуйте ще раз.");
-    }
+  const notyf = new Notyf({
+    position: {
+      x: "right",
+      y: "top",
+    },
   });
 
-  modalForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  if (mainForm) {
+    mainForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
 
-    const name = modalForm.querySelector("[name='modalName']").value.trim();
-    const phone = modalForm.querySelector("[name='modalPhone']").value.trim();
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phoneInput").value.trim();
 
-    try {
-      await axios.post("http://127.0.0.1:8080/send-email/", { name, phone });
-      alert("Заявка успішно відправлена!");
-      modalForm.reset();
+      try {
+        await axios.post("http://127.0.0.1:8080/send-email/", { name, phone });
+        mainForm.reset();
 
-      if (modalElement) {
-        modalElement.style.display = "none";
+        if (modalElement) {
+          modalElement.style.display = "none";
+        }
+
+        document.body.classList.remove("modal-open");
+        notyf.success("Заявка успішно відправлена!");
+      } catch (error) {
+        console.error("Помилка відправки:", error);
+        notyf.error("Сталася помилка. Спробуйте ще раз.");
       }
-    } catch (error) {
-      console.error("Помилка відправки:", error);
-      alert("Не вдалося відправити заявку. Спробуйте ще раз.");
-    }
-  });
+    });
+  }
+
+  if (modalForm) {
+    modalForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const name = modalForm.querySelector("[name='modalName']").value.trim();
+      const phone = modalForm.querySelector("[name='modalPhone']").value.trim();
+
+      try {
+        await axios.post("http://127.0.0.1:8080/send-email/", { name, phone });
+        modalForm.reset();
+        notyf.success("Заявка успішно відправлена!");
+
+        if (modalElement) {
+          modalElement.style.display = "none";
+        }
+      } catch (error) {
+        console.error("Помилка відправки:", error);
+        notyf.error("Сталася помилка. Спробуйте ще раз.");
+      }
+    });
+  }
 });

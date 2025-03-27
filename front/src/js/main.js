@@ -32,7 +32,6 @@ const closeBtn = document.getElementById("closeModal");
 
 openBtn.addEventListener("click", () => {
   modal.style.display = "flex";
-  document.body.classList.add("no-scroll");
 });
 
 closeBtn.addEventListener("click", () => {

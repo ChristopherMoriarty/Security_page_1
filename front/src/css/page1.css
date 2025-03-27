@@ -4,6 +4,7 @@ body {
   background-color: #f8f9fa;
   margin: 0;
   padding: 20px;
+  color: #f8f9fa;
 }
 ul,
 ol {
@@ -12,34 +13,34 @@ ol {
 .container {
   max-width: 800px;
   margin: auto;
-  background: #fff;
+  background: #1b1b1b;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h1,
 h2 {
-  color: #d9534f;
+  color: #f7e306;
   text-align: center;
   word-wrap: break-word;
 }
 h2 {
-  border-bottom: 2px solid #d9534f;
+  border-bottom: 2px solid #f7e306;
   padding-bottom: 5px;
   margin-top: 20px;
 }
 p {
-  color: #333;
+  color: #fbfbfb;
 }
 ul {
   list-style: none;
   padding: 0;
 }
 ul li {
-  background: #f1f1f1;
+  background: #1b1b1b;
   margin: 5px 0;
   padding: 10px;
-  border-left: 5px solid #d9534f;
+  border-left: 5px solid #f7e306;
 }
 .contact {
   text-align: center;
@@ -48,12 +49,16 @@ ul li {
 .contact a {
   display: inline-block;
   text-decoration: none;
-  background: #d9534f;
-  color: white;
+  background: #f7e306;
+  color: #1b1b1b;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 18px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in;
 }
 .contact a:hover {
-  background: #c9302c;
+  border: 1px solid #fbfbfb;
+  background: transparent;
+  color: #fbfbfb;
 }

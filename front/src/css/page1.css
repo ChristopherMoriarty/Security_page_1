@@ -105,3 +105,8 @@ input:focus {
   color: var(--accent);
   border: 1px solid #fbfbfb;
 }
+@media screen and (min-width: 375px) {
+  input {
+    width: 270px;
+  }
+}

@@ -73,6 +73,10 @@ ul li {
   display: flex;
   flex-direction: column;
 }
+input:focus {
+  border-color: #0f0f0f;
+  outline: none;
+}
 input {
   width: 400px;
   padding: 10px;
@@ -81,10 +85,6 @@ input {
   border-radius: 5px;
   font-size: 16px;
   transition: border-color 0.3s;
-}
-input:focus {
-  border-color: #0f0f0f;
-  outline: none;
 }
 .form-button {
   margin: 0 auto;
@@ -105,7 +105,7 @@ input:focus {
   color: var(--accent);
   border: 1px solid #fbfbfb;
 }
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
   input {
     width: 270px;
   }

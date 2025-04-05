@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const phone = document.getElementById("phoneInput").value.trim();
 
       try {
-        await axios.post("http://127.0.0.1:8080/send-email/", { name, phone });
+        await axios.post("https://liverpool-ua.com/api/send-email/", { name, phone });
         mainForm.reset();
 
         if (modalElement) {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const phone = modalForm.querySelector("[name='modalPhone']").value.trim();
 
       try {
-        await axios.post("http://127.0.0.1:8080/send-email/", { name, phone });
+        await axios.post("https://liverpool-ua.com/api/send-email/", { name, phone });
         modalForm.reset();
         notyf.success("Заявка успішно відправлена!");
 

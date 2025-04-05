@@ -105,8 +105,33 @@ input {
   color: var(--accent);
   border: 1px solid #fbfbfb;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 475px) {
   input {
-    width: 270px;
+    max-width: 270px;
   }
+}
+.home-link-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+.home-button {
+  display: inline-block;
+  background: #f7e306;
+  color: #1b1b1b;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.home-button:hover {
+  background: #0f0f0f;
+  color: #f7e306;
+  border: 1px solid #fbfbfb;
+}
+.btn {
+  text-align: center;
+  margin-top: 30px;
 }

@@ -6,13 +6,17 @@ services:
     build:
       context: .
       dockerfile: .docker/api/Dockerfile
+      args:
+        SMTP_USER: ${SMTP_USER}
+        SMTP_PASSWORD: ${SMTP_PASSWORD}
+        TARGET_EMAIL: ${TARGET_EMAIL}
     restart: always
     network_mode: host
     environment:
       - SMTP_USER=${SMTP_USER}
       - SMTP_PASSWORD=${SMTP_PASSWORD}
       - TARGET_EMAIL=${TARGET_EMAIL}
-  
+
   front:
     container_name: front
     build:

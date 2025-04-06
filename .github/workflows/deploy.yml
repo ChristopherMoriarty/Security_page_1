@@ -8,11 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      SMTP_USER: ${{ secrets.SMTP_USER }}
-      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-      TARGET_EMAIL: ${{ secrets.TARGET_EMAIL }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

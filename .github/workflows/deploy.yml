@@ -17,18 +17,20 @@ jobs:
 
       - name: Build API image
         run: |
-          docker build \
+          docker buildx build \
             -f .docker/api/Dockerfile \
             --build-arg SMTP_USER=${{ secrets.SMTP_USER }} \
             --build-arg SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }} \
             --build-arg TARGET_EMAIL=${{ secrets.TARGET_EMAIL }} \
-            -t api .
+            -t api \
+            .
 
       - name: Build Front image
         run: |
-          docker build \
+          docker buildx build \
             -f .docker/front/Dockerfile \
-            -t front .
+            -t front \
+            .
 
       - name: Deploy
         uses: appleboy/ssh-action@v0.1.6

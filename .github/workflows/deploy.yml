@@ -24,9 +24,9 @@ jobs:
         run: |
           docker build \
             -f .docker/api/Dockerfile \
-            --build-arg SMTP_USER=$SMTP_USER \
-            --build-arg SMTP_PASSWORD=$SMTP_PASSWORD \
-            --build-arg TARGET_EMAIL=$TARGET_EMAIL \
+            --build-arg SMTP_USER=${{ secrets.SMTP_USER }} \
+            --build-arg SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }} \
+            --build-arg TARGET_EMAIL=${{ secrets.TARGET_EMAIL }} \
             -t api .
 
       - name: Build Front image
@@ -34,15 +34,15 @@ jobs:
           docker build \
             -f .docker/front/Dockerfile \
             -t front .
-      
-      - name: Deploy via SSH with password
+
+      - name: Deploy
         uses: appleboy/ssh-action@v0.1.6
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd Security_page_1
+            cd /root/Security_page_1
             git pull origin main
             docker-compose down
             docker-compose up -d --build
